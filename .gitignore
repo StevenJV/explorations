@@ -33,7 +33,6 @@ MolesAssemblies
 *.Publish.xml
 imageStore
 _gsdata_
-*.config
 ![Aa]pp.config
 ![Ww]eb.config
 !repositories.config
