@@ -8,6 +8,7 @@ namespace LambdaExplorations
         static void Main(string[] args){
             Console.WriteLine("Fun With Lambdas");
             TraditionalDelegateSyntax();
+            AnonymousMethodSyntax();
             Console.ReadKey();
         }
 
