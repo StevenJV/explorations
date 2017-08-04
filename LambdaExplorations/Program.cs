@@ -9,8 +9,10 @@ namespace LambdaExplorations
             Console.WriteLine("Fun With Lambdas");
             TraditionalDelegateSyntax();
             AnonymousMethodSyntax();
+            LambdaSyntax();
             Console.ReadKey();
         }
+
 
         private static void TraditionalDelegateSyntax(){
             List<int> list = new List<int>();
@@ -22,7 +24,7 @@ namespace LambdaExplorations
         }
 
         private static bool IsEvenNumber(int i){
-            return i % 2 == 0;
+            return i%2 == 0;
         }
 
 
@@ -41,6 +43,25 @@ namespace LambdaExplorations
                 Console.Write($"{evenNumber} \t");
             }
             Console.WriteLine();
+        }
+
+        private static void LambdaSyntax(){
+            List<int> list = new List<int>(new int[] {20, 1, 4, 8, 9, 44});
+
+            List<int> evenNumbers = list.FindAll(
+                // arguementsToProcess => statementsToProcessThem
+                // (int i => (i % 2) == 0)
+                //  i => (i % 2) == 0
+                i =>
+                {
+                    Console.WriteLine($"examining {i}");
+                    bool isEven = (i % 2) == 0;
+                    if (isEven) Console.WriteLine("even");
+                    return isEven;
+                }
+            );
+
+            PrintEvenNumbers(evenNumbers);
         }
     }
 }
