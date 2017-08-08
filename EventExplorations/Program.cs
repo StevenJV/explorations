@@ -43,7 +43,7 @@ namespace EventExplorations
         public void DoTask(string taskName){
             Task = taskName;
             OnWorkBegun();
-            for (int i = 0;  i <= _timeToComplete; i++ ) Console.WriteLine("working");
+            for (int i = 0;  i <= _timeToComplete; i++ ) Console.WriteLine($"{Name} working");
             OnWorkCompleted();
         }
 
