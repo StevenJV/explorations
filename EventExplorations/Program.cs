@@ -33,8 +33,10 @@ namespace EventExplorations
 
     public class Worker
     {
-        //public delegate void WorkBegunHandler(object sender, WorkArgs e);
-        public EventHandler<WorkArgs> WorkBegun;
+        public delegate void WorkBegunHandler(object sender, WorkArgs args);
+        public WorkBegunHandler WorkBegun;
+        //public EventHandler<WorkArgs> WorkBegun;
+
         public EventHandler<WorkArgs> WorkCompleted;
 
         private static readonly Random Rnd = new Random();
@@ -68,6 +70,7 @@ namespace EventExplorations
             WorkCompleted?.Invoke(this, args);
         }
     }
+
 
     public class WorkArgs : EventArgs
     {
