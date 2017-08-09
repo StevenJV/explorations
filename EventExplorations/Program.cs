@@ -6,18 +6,18 @@ namespace EventExplorations
     {
         static void Main(string[] args){
             Worker joe = new Worker("Joe");
-            Reporter reporter = new Reporter(joe);
+            new Reporter(joe);
             joe.DoTask("one");
             Console.WriteLine("---");
 
             Worker jack = new Worker("Jack");
+            new Reporter(jack);
             jack.DoTask("two");
-            reporter = new Reporter(jack);
             Console.WriteLine("---");
 
             Worker mary = new Worker("Mary");
-            jack.DoTask("three");
-            reporter = new Reporter(jack);
+            new Reporter(mary);
+            mary.DoTask("three");
 
             Console.WriteLine("---");
             Console.ReadKey();
