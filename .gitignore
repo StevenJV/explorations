@@ -6,6 +6,7 @@ packages
 _ReSharper.*
 [Bb]in/
 [Oo]bj/
+.vs/
 *.user
 *.suo
 *.tlh
